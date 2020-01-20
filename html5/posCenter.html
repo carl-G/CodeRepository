@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位居中</title>
+</head>
+<style>
+    html,body {
+        padding: 0;
+        margin: 0;
+    }
+    .mt20 {
+        margin-top: 20px;
+    }
+    .wb100 {
+        width: 100%;
+    }
+    .demo1 {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        background-color: aqua;
+    }
+    .demo-flex {
+        display: flex;
+        background-color: aqua;
+        justify-content: center; /* 水平居中 */
+        align-items: center;     /* 垂直居中 */
+        width: 100%;
+        height: 200px;
+
+    }
+    .demo-c3 {
+        text-align: center;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: auto;
+    }
+    .red {
+        background-color: red;
+    }
+    .box-size {
+        width: 200px;
+        height: 100px;
+    }
+    /* 可以通过translate实现 IE10以上的场景才支持。移动端开发忽略 */
+    .box1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* 直接使用absolute的定位配合margin:auto也可以实现 */
+    .box2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .demo-table {
+        display: table-cell;
+        
+    }
+    .demo-c3::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .box-c3 {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        white-space: normal;
+    }
+    .demo-grid {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <!-- position定位1 -->
+    <div class="demo1">
+        <div class="box1 box-size red"></div>
+    </div>
+
+     <!-- position定位2 -->
+     <div class="demo1 mt20">
+        <div class="box2 box-size red"></div>
+    </div>
+
+    <!-- flex定位 -->
+    <div class="demo-flex mt20">
+        <div class="box-flex box-size red"></div>
+    </div>
+
+   <!-- table定位 -->
+    <table  class="wb100 mt20">
+        <tr align="center" class="demo-table demo1">
+            <td  class="box-table box-size red"></td>
+        </tr>
+    </table>
+
+    <!-- 伪类定位 -->
+    <div class="demo1 demo-c3 mt20">
+        <div class="box-c3 box-size red"></div>
+    </div>
+
+    <!-- grid布局 -->
+    <div class="demo1 demo-grid mt20">
+       
+        <div class="box-grid box-size red"></div>
+        
+    </div>
+</body>
+</html>
