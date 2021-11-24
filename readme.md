@@ -7,14 +7,15 @@
 + Css 
 + Vue
 + React
-+ 算法/数据结构
-+ 工程化
-+ 性能优化
++ 算法/数据结构 => AlgorithmDesign
++ 工程化 => Engineer
++ 性能优化 => PerformanceOptimization
 + TypeScript
-+ 网络
-+ 设计模式
-+ 安全
++ 网络 => Internet
++ 设计模式 => DesignMode
++ 安全 => Safety
 + Node
++ Git
 
 
 
