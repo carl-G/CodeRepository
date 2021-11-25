@@ -226,4 +226,5 @@ $ git config --global push.default simple
 
 `$ git push origin --tags`
 
-文章绝大部分出自于[阮一峰的Git远程操作](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)详解一文
+参考资料：
+文章绝大部分内容出自于[阮一峰的Git远程操作](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)详解一文
